@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://Data/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Data/">
+
+<xs:element name="addAhorros" type="tns:addAhorros"/>
+
+<xs:element name="addAhorrosResponse" type="tns:addAhorrosResponse"/>
+
+<xs:element name="addCheques" type="tns:addCheques"/>
+
+<xs:element name="addChequesResponse" type="tns:addChequesResponse"/>
+
+<xs:element name="addCorrientes" type="tns:addCorrientes"/>
+
+<xs:element name="addCorrientesResponse" type="tns:addCorrientesResponse"/>
+
+<xs:element name="balance" type="tns:balance"/>
+
+<xs:element name="balanceResponse" type="tns:balanceResponse"/>
+
+<xs:element name="depositar" type="tns:depositar"/>
+
+<xs:element name="depositarResponse" type="tns:depositarResponse"/>
+
+<xs:element name="listarCuentas" type="tns:listarCuentas"/>
+
+<xs:element name="listarCuentasResponse" type="tns:listarCuentasResponse"/>
+
+<xs:element name="retirar" type="tns:retirar"/>
+
+<xs:element name="retirarResponse" type="tns:retirarResponse"/>
+
+<xs:complexType name="addCheques">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="idCliente" type="xs:long"/>
+<xs:element name="nombreCliente" type="xs:string" minOccurs="0"/>
+<xs:element name="saldo" type="xs:double"/>
+<xs:element name="idTalonario" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addChequesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarCuentas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarCuentasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="depositar">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="valor" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="depositarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCorrientes">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="idCliente" type="xs:long"/>
+<xs:element name="nombreCliente" type="xs:string" minOccurs="0"/>
+<xs:element name="saldo" type="xs:double"/>
+<xs:element name="limiteCredito" type="xs:double"/>
+<xs:element name="tasaInteres" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCorrientesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="balance">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="balanceResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retirar">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="valor" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="retirarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAhorros">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="idCliente" type="xs:long"/>
+<xs:element name="nombreCliente" type="xs:string" minOccurs="0"/>
+<xs:element name="saldo" type="xs:double"/>
+<xs:element name="tasaInteres" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAhorrosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
